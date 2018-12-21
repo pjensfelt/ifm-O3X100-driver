@@ -26,7 +26,7 @@ cmake ..
 make
 ```
 
-There are is a testapp that can be run
+There is a testapp that can be run
 
 `./simpletest`
 
