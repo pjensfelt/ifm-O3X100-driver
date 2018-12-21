@@ -236,7 +236,7 @@ namespace ifm {
         char msgbuf[1024];
         strcpy(msgbuf, msg.str().c_str());
         std::cout << msg.str();
-        std::cout << msg.str().size() << std::endl;
+        std::cout << msg.str().size() << ":" << sizeof(msgbuf) << std::endl;
         send(command_socket, msgbuf, sizeof(msgbuf),0);
         close(command_socket);
 
