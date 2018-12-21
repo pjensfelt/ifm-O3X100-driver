@@ -94,12 +94,14 @@ namespace ifm {
             }
         }
 
+        pixel_matrix_ = std::vector<std::vector<u_char>>(nrows,std::vector<u_char>(ncols));
+
         for(int icol = 0; icol < ncols; icol++)
         {
             for(int irow = 0; irow < nrows; irow++)
             {
                 u_char v = 240 * pixel_values[nrows * icol + irow] / max_f;
-                pixel_matrix_[icol][nrows-irow-1] = v;
+                pixel_matrix_[nrows-irow-1][icol] = v;
             }
         }
         

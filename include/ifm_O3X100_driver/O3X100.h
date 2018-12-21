@@ -20,12 +20,13 @@ namespace ifm {
         void connect_image_socket();
         void disconnect_image_socket();
         std::string get_name() const;
+        std::vector<std::vector<u_char>> get_pixelmatrix() { return pixel_matrix_;};
         std::vector<Point> get_pointcloud() { return pcl_;};
         void trigger();
 
         private:
-        u_char pixel_matrix_[172][224];
-        int image_socket_;
+        std::vector<std::vector<u_char>> pixel_matrix_;
         std::vector<Point> pcl_;
+        int image_socket_;
     };
 }
